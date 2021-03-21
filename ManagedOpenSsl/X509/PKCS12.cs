@@ -124,7 +124,7 @@ namespace OpenSSL.X509
 		/// <param name="key"></param>
 		/// <param name="cert"></param>
 		/// <param name="ca"></param>
-		public PKCS12(string password, CryptoKey key, X509Certificate cert, Stack<X509Certificate> ca) :
+		public PKCS12(string password = "", CryptoKey key = null, X509Certificate cert = null, Stack<X509Certificate> ca = null) :
 			base(Create(password, null, key, cert, ca, PBE.Default, PBE.Default, 0, KeyType.KEY_DEFAULT), true)
 		{
 			Init(password);
